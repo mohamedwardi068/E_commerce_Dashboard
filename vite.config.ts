@@ -14,7 +14,8 @@ export default defineConfig({
     prerender: {
       enabled: true,
       crawlLinks: true,
-      filter: ({ path }) => ["/", "/analytics", "/customers", "/orders", "/products", "/profile"].includes(path),
+      filter: ({ path }) =>
+        ["/", "/analytics", "/customers", "/orders", "/products", "/profile"].includes(path),
     },
   },
   nitro: false, // Disable the custom Nitro build environment to prevent rollup input errors
