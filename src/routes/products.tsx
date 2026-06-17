@@ -53,7 +53,7 @@ function ProductsPage() {
             <div>
               <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Products</h1>
               <p className="text-sm text-muted-foreground">
-                Manage your store inventory and track product performance.
+                Manage your store inventory and tracks product performance.
               </p>
             </div>
             <div className="flex items-center gap-2">
