@@ -11,8 +11,15 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+      filter: ({ path }) => ["/", "/analytics", "/customers", "/orders", "/products", "/profile"].includes(path),
+    },
   },
-  nitro: {
-    preset: "github_pages",
+  nitro: false, // Disable the custom Nitro build environment to prevent rollup input errors
+  vite: {
+    // Set base path for GitHub Pages subpath hosting during CI/CD build
+    base: process.env.GITHUB_ACTIONS ? "/E_commerce_Dashboard/" : "/",
   },
 });
