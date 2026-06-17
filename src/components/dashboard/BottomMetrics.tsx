@@ -3,7 +3,13 @@ import { Users, UserPlus, RotateCcw, Star, Package, AlertTriangle } from "lucide
 const metrics = [
   { label: "Total Customers", value: "24,532", delta: "+ 16.3%", icon: Users, tone: "primary" },
   { label: "New Customers", value: "2,543", delta: "+ 12.8%", icon: UserPlus, tone: "accent" },
-  { label: "Returning Customers", value: "21,989", delta: "+ 17.2%", icon: RotateCcw, tone: "accent" },
+  {
+    label: "Returning Customers",
+    value: "21,989",
+    delta: "+ 17.2%",
+    icon: RotateCcw,
+    tone: "accent",
+  },
   { label: "Customer Satisfaction", value: "4.8/5", delta: "+ 0.2", icon: Star, tone: "chart-3" },
   { label: "Total Products", value: "1,248", delta: "+ 8.1%", icon: Package, tone: "chart-3" },
   { label: "Low Stock Items", value: "23", delta: "- 4", icon: AlertTriangle, tone: "destructive" },
@@ -24,9 +30,12 @@ export function BottomMetrics() {
         const color = toneToHex[metric.tone];
         const Icon = metric.icon;
         const isNegative = metric.delta.startsWith("-");
-        
+
         return (
-          <div key={metric.label} className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4">
+          <div
+            key={metric.label}
+            className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4"
+          >
             <div
               className="grid h-10 w-10 shrink-0 place-items-center rounded-full"
               style={{ backgroundColor: `color-mix(in oklab, ${color} 15%, transparent)`, color }}
@@ -37,7 +46,9 @@ export function BottomMetrics() {
               <p className="truncate text-[10px] uppercase text-muted-foreground">{metric.label}</p>
               <div className="flex items-baseline gap-2">
                 <span className="text-lg font-bold text-foreground">{metric.value}</span>
-                <span className={`text-[10px] font-semibold ${isNegative ? "text-destructive" : "text-accent"}`}>
+                <span
+                  className={`text-[10px] font-semibold ${isNegative ? "text-destructive" : "text-accent"}`}
+                >
                   {metric.delta}
                 </span>
               </div>

@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Headphones, Watch, Briefcase, Footprints, Shirt } from "lucide-react";
 
 const products = [
@@ -38,9 +39,12 @@ export function BestSellers() {
           );
         })}
       </div>
-      <button className="mt-4 w-full rounded-lg bg-muted/30 py-2 text-xs font-semibold text-foreground transition-colors hover:bg-muted/50">
+      <Link
+        to="/products"
+        className="mt-4 block text-center w-full rounded-lg bg-muted/30 py-2 text-xs font-semibold text-foreground transition-colors hover:bg-muted/50"
+      >
         View all products
-      </button>
+      </Link>
     </div>
   );
 }

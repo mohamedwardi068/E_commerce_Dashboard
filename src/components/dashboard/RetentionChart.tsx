@@ -1,12 +1,4 @@
-import {
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-} from "recharts";
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 
 const data = [
   { product: "Phone", income: 125 },
@@ -34,8 +26,23 @@ export function RetentionChart() {
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} layout="vertical" margin={{ left: 10, right: 10 }}>
             <CartesianGrid strokeDasharray="3 6" stroke="var(--border)" horizontal={false} />
-            <XAxis type="number" stroke="var(--muted-foreground)" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(v) => `$${v}k`} />
-            <YAxis dataKey="product" type="category" stroke="var(--foreground)" fontSize={12} tickLine={false} axisLine={false} width={70} />
+            <XAxis
+              type="number"
+              stroke="var(--muted-foreground)"
+              fontSize={11}
+              tickLine={false}
+              axisLine={false}
+              tickFormatter={(v) => `$${v}k`}
+            />
+            <YAxis
+              dataKey="product"
+              type="category"
+              stroke="var(--foreground)"
+              fontSize={12}
+              tickLine={false}
+              axisLine={false}
+              width={70}
+            />
             <Tooltip
               cursor={{ fill: "var(--muted)", opacity: 0.3 }}
               contentStyle={{

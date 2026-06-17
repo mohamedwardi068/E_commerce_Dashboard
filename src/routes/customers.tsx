@@ -1,5 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Users, UserPlus, UserCheck, Star, DollarSign, Search, Bell, ChevronDown, Download, Plus } from "lucide-react";
+import {
+  Users,
+  UserPlus,
+  UserCheck,
+  Star,
+  DollarSign,
+  Search,
+  Bell,
+  ChevronDown,
+  Download,
+  Plus,
+} from "lucide-react";
 import { Sidebar } from "@/components/dashboard/Sidebar";
 import { MetricCard } from "@/components/dashboard/MetricCard";
 import { CustomerGrowthChart } from "@/components/customers/CustomerGrowthChart";
@@ -41,7 +52,9 @@ function CustomersPage() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Customers</h1>
-              <p className="text-sm text-muted-foreground">Understand your customers and build stronger relationships.</p>
+              <p className="text-sm text-muted-foreground">
+                Understand your customers and build stronger relationships.
+              </p>
             </div>
             <div className="flex items-center gap-2">
               <button className="flex items-center gap-2 rounded-md border border-border bg-card/50 px-3 py-2 text-xs font-medium text-muted-foreground hover:text-foreground">
@@ -55,11 +68,46 @@ function CustomersPage() {
 
           {/* Top Metrics - 5 columns */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-            <MetricCard label="Total Customers" value="24,532" delta={16.3} icon={Users} spark={spark(1)} tone="primary" />
-            <MetricCard label="New Customers (30D)" value="2,543" delta={12.8} icon={UserPlus} spark={spark(2)} tone="accent" />
-            <MetricCard label="Returning Customers" value="21,989" delta={17.2} icon={UserCheck} spark={spark(3)} tone="accent" />
-            <MetricCard label="Customer Satisfaction" value="4.8 / 5" delta={0.2} icon={Star} spark={spark(4)} tone="chart-3" />
-            <MetricCard label="Customer Lifetime Value" value="$356.78" delta={8.7} icon={DollarSign} spark={spark(5)} tone="warning" />
+            <MetricCard
+              label="Total Customers"
+              value="24,532"
+              delta={16.3}
+              icon={Users}
+              spark={spark(1)}
+              tone="primary"
+            />
+            <MetricCard
+              label="New Customers (30D)"
+              value="2,543"
+              delta={12.8}
+              icon={UserPlus}
+              spark={spark(2)}
+              tone="accent"
+            />
+            <MetricCard
+              label="Returning Customers"
+              value="21,989"
+              delta={17.2}
+              icon={UserCheck}
+              spark={spark(3)}
+              tone="accent"
+            />
+            <MetricCard
+              label="Customer Satisfaction"
+              value="4.8 / 5"
+              delta={0.2}
+              icon={Star}
+              spark={spark(4)}
+              tone="chart-3"
+            />
+            <MetricCard
+              label="Customer Lifetime Value"
+              value="$356.78"
+              delta={8.7}
+              icon={DollarSign}
+              spark={spark(5)}
+              tone="warning"
+            />
           </div>
 
           {/* Middle Charts */}

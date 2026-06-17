@@ -15,7 +15,14 @@ export function InventoryStatus() {
         <div className="relative h-28 w-28 shrink-0">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
-              <Pie data={data} innerRadius={35} outerRadius={55} paddingAngle={2} dataKey="value" stroke="none">
+              <Pie
+                data={data}
+                innerRadius={35}
+                outerRadius={55}
+                paddingAngle={2}
+                dataKey="value"
+                stroke="none"
+              >
                 {data.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}

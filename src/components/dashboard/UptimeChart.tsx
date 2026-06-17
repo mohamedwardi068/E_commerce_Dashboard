@@ -12,7 +12,13 @@ export function UptimeChart() {
       </div>
       <div className="relative mt-2 h-56 w-full">
         <ResponsiveContainer width="100%" height="100%">
-          <RadialBarChart innerRadius="78%" outerRadius="100%" data={data} startAngle={90} endAngle={-270}>
+          <RadialBarChart
+            innerRadius="78%"
+            outerRadius="100%"
+            data={data}
+            startAngle={90}
+            endAngle={-270}
+          >
             <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
             <RadialBar dataKey="value" cornerRadius={20} background={{ fill: "var(--muted)" }} />
           </RadialBarChart>

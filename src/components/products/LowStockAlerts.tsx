@@ -28,7 +28,9 @@ export function LowStockAlerts() {
         ))}
       </div>
       <div className="mt-4 border-t border-border pt-4 text-center">
-        <button className="text-xs font-medium text-primary hover:text-primary/80">View all low stock items</button>
+        <button className="text-xs font-medium text-primary hover:text-primary/80">
+          View all low stock items
+        </button>
       </div>
     </div>
   );

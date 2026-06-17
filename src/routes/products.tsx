@@ -1,5 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Package, ShieldCheck, AlertCircle, DollarSign, AlertTriangle, Search, Bell, ChevronDown, Download, Upload, Plus } from "lucide-react";
+import {
+  Package,
+  ShieldCheck,
+  AlertCircle,
+  DollarSign,
+  AlertTriangle,
+  Search,
+  Bell,
+  ChevronDown,
+  Download,
+  Upload,
+  Plus,
+} from "lucide-react";
 import { Sidebar } from "@/components/dashboard/Sidebar";
 import { MetricCard } from "@/components/dashboard/MetricCard";
 import { ProductsOverviewChart } from "@/components/products/ProductsOverviewChart";
@@ -40,7 +52,9 @@ function ProductsPage() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Products</h1>
-              <p className="text-sm text-muted-foreground">Manage your store inventory and track product performance.</p>
+              <p className="text-sm text-muted-foreground">
+                Manage your store inventory and track product performance.
+              </p>
             </div>
             <div className="flex items-center gap-2">
               <button className="flex items-center gap-2 rounded-md border border-border bg-card/50 px-3 py-2 text-xs font-medium text-muted-foreground hover:text-foreground">
@@ -57,11 +71,46 @@ function ProductsPage() {
 
           {/* Top Metrics - 5 columns */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-            <MetricCard label="Total Products" value="1,248" delta={8.6} icon={Package} spark={spark(1)} tone="primary" />
-            <MetricCard label="Active Products" value="1,102" delta={7.3} icon={ShieldCheck} spark={spark(2)} tone="accent" />
-            <MetricCard label="Out of Stock" value="46" delta={-12.5} icon={AlertCircle} spark={spark(3)} tone="warning" />
-            <MetricCard label="Total Inventory Value" value="$324.6K" delta={11.4} icon={DollarSign} spark={spark(4)} tone="chart-3" />
-            <MetricCard label="Low Stock Items" value="78" delta={-5.1} icon={AlertTriangle} spark={spark(5)} tone="warning" />
+            <MetricCard
+              label="Total Products"
+              value="1,248"
+              delta={8.6}
+              icon={Package}
+              spark={spark(1)}
+              tone="primary"
+            />
+            <MetricCard
+              label="Active Products"
+              value="1,102"
+              delta={7.3}
+              icon={ShieldCheck}
+              spark={spark(2)}
+              tone="accent"
+            />
+            <MetricCard
+              label="Out of Stock"
+              value="46"
+              delta={-12.5}
+              icon={AlertCircle}
+              spark={spark(3)}
+              tone="warning"
+            />
+            <MetricCard
+              label="Total Inventory Value"
+              value="$324.6K"
+              delta={11.4}
+              icon={DollarSign}
+              spark={spark(4)}
+              tone="chart-3"
+            />
+            <MetricCard
+              label="Low Stock Items"
+              value="78"
+              delta={-5.1}
+              icon={AlertTriangle}
+              spark={spark(5)}
+              tone="warning"
+            />
           </div>
 
           {/* Middle Charts */}

@@ -67,11 +67,40 @@ export function RevenueChart() {
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 6" stroke="var(--border)" vertical={false} />
-            <XAxis dataKey="m" stroke="var(--muted-foreground)" fontSize={11} tickLine={false} axisLine={false} />
-            <YAxis stroke="var(--muted-foreground)" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(v) => `$${v}k`} />
-            <Tooltip content={<CustomTooltip />} cursor={{ stroke: "var(--primary)", strokeOpacity: 0.3 }} />
-            <Area type="monotone" dataKey="last" stroke="var(--muted-foreground)" strokeOpacity={0.6} strokeDasharray="4 4" fill="transparent" strokeWidth={2} />
-            <Area type="monotone" dataKey="mrr" stroke="var(--primary)" strokeWidth={2.5} fill="url(#mrrGrad)" />
+            <XAxis
+              dataKey="m"
+              stroke="var(--muted-foreground)"
+              fontSize={11}
+              tickLine={false}
+              axisLine={false}
+            />
+            <YAxis
+              stroke="var(--muted-foreground)"
+              fontSize={11}
+              tickLine={false}
+              axisLine={false}
+              tickFormatter={(v) => `$${v}k`}
+            />
+            <Tooltip
+              content={<CustomTooltip />}
+              cursor={{ stroke: "var(--primary)", strokeOpacity: 0.3 }}
+            />
+            <Area
+              type="monotone"
+              dataKey="last"
+              stroke="var(--muted-foreground)"
+              strokeOpacity={0.6}
+              strokeDasharray="4 4"
+              fill="transparent"
+              strokeWidth={2}
+            />
+            <Area
+              type="monotone"
+              dataKey="mrr"
+              stroke="var(--primary)"
+              strokeWidth={2.5}
+              fill="url(#mrrGrad)"
+            />
           </AreaChart>
         </ResponsiveContainer>
       </div>

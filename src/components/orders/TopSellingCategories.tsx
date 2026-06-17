@@ -17,7 +17,9 @@ export function TopSellingCategories() {
             <div className="flex h-2 flex-1 items-center rounded-full bg-muted/50">
               <div className="h-full rounded-full bg-blue-500" style={{ width: category.width }} />
             </div>
-            <div className="w-12 text-right text-xs font-medium text-foreground">{category.value}</div>
+            <div className="w-12 text-right text-xs font-medium text-foreground">
+              {category.value}
+            </div>
           </div>
         ))}
       </div>

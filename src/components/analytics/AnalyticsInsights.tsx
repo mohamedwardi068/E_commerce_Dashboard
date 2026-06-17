@@ -45,7 +45,9 @@ export function AnalyticsInsights() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
         {insights.map((item) => (
           <div key={item.title} className="flex gap-3">
-            <div className={`mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg ${item.bgClass} ${item.colorClass}`}>
+            <div
+              className={`mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg ${item.bgClass} ${item.colorClass}`}
+            >
               <item.icon className="h-4 w-4" />
             </div>
             <div>

@@ -1,4 +1,12 @@
-import { Bell, ChevronDown, ShoppingCart, AlertTriangle, Settings, LogOut, User } from "lucide-react";
+import {
+  Bell,
+  ChevronDown,
+  ShoppingCart,
+  AlertTriangle,
+  Settings,
+  LogOut,
+  User,
+} from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 
@@ -48,7 +56,9 @@ export function HeaderActions() {
                 </div>
                 <div>
                   <p className="text-xs font-medium text-foreground">New Order #1025</p>
-                  <p className="mt-0.5 text-[10px] text-muted-foreground">Order received from Jane Doe.</p>
+                  <p className="mt-0.5 text-[10px] text-muted-foreground">
+                    Order received from Jane Doe.
+                  </p>
                   <p className="mt-1 text-[9px] font-medium text-muted-foreground">2m ago</p>
                 </div>
               </div>
@@ -58,7 +68,9 @@ export function HeaderActions() {
                 </div>
                 <div>
                   <p className="text-xs font-medium text-foreground">New Order #1026</p>
-                  <p className="mt-0.5 text-[10px] text-muted-foreground">Order received from Mark Smith.</p>
+                  <p className="mt-0.5 text-[10px] text-muted-foreground">
+                    Order received from Mark Smith.
+                  </p>
                   <p className="mt-1 text-[9px] font-medium text-muted-foreground">15m ago</p>
                 </div>
               </div>
@@ -68,7 +80,9 @@ export function HeaderActions() {
                 </div>
                 <div>
                   <p className="text-xs font-medium text-foreground">Out of Stock</p>
-                  <p className="mt-0.5 text-[10px] text-muted-foreground">Running Shoes (RS-2024) is out of stock.</p>
+                  <p className="mt-0.5 text-[10px] text-muted-foreground">
+                    Running Shoes (RS-2024) is out of stock.
+                  </p>
                   <p className="mt-1 text-[9px] font-medium text-muted-foreground">1h ago</p>
                 </div>
               </div>

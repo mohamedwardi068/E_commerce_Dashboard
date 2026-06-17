@@ -26,14 +26,19 @@ export function CustomersByLocation() {
       <div className="mt-2 flex flex-col gap-6 lg:flex-row items-center">
         {/* Map */}
         <div className="w-full lg:w-1/2">
-          <ComposableMap projectionConfig={{ scale: 180 }} style={{ width: "100%", height: "100%" }}>
+          <ComposableMap
+            projectionConfig={{ scale: 180 }}
+            style={{ width: "100%", height: "100%" }}
+          >
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => (
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill={highlightedCountries.includes(geo.properties.name) ? "#3B82F6" : "#1E293B"}
+                    fill={
+                      highlightedCountries.includes(geo.properties.name) ? "#3B82F6" : "#1E293B"
+                    }
                     stroke="#334155"
                     strokeWidth={0.3}
                     style={{

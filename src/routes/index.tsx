@@ -14,7 +14,10 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Nimbus E-Commerce — Dashboard" },
-      { name: "description", content: "Real-time analytics dashboard for e-commerce sales, retention, and conversion." },
+      {
+        name: "description",
+        content: "Real-time analytics dashboard for e-commerce sales, retention, and conversion.",
+      },
     ],
   }),
   component: Dashboard,
@@ -33,7 +36,9 @@ function Dashboard() {
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Store Overview</h1>
-              <p className="text-sm text-muted-foreground">Welcome back — here's how your store is performing today.</p>
+              <p className="text-sm text-muted-foreground">
+                Welcome back — here's how your store is performing today.
+              </p>
             </div>
             <div className="flex gap-2 text-xs">
               {["7d", "30d", "90d", "12m", "Custom"].map((r, i) => (
@@ -52,10 +57,38 @@ function Dashboard() {
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <MetricCard label="Total Sales" value="$1.28M" delta={12.6} icon={DollarSign} spark={spark(1)} tone="primary" />
-            <MetricCard label="Conversion Rate" value="3.2%" delta={1.5} icon={TrendingUp} spark={spark(2)} tone="accent" />
-            <MetricCard label="Active Sessions" value="1,432" delta={-2.1} icon={Users} spark={spark(3)} tone="chart-3" />
-            <MetricCard label="Average Order Value" value="$89.41" delta={8.7} icon={ShoppingCart} spark={spark(4)} tone="warning" />
+            <MetricCard
+              label="Total Sales"
+              value="$1.28M"
+              delta={12.6}
+              icon={DollarSign}
+              spark={spark(1)}
+              tone="primary"
+            />
+            <MetricCard
+              label="Conversion Rate"
+              value="3.2%"
+              delta={1.5}
+              icon={TrendingUp}
+              spark={spark(2)}
+              tone="accent"
+            />
+            <MetricCard
+              label="Active Sessions"
+              value="1,432"
+              delta={-2.1}
+              icon={Users}
+              spark={spark(3)}
+              tone="chart-3"
+            />
+            <MetricCard
+              label="Average Order Value"
+              value="$89.41"
+              delta={8.7}
+              icon={ShoppingCart}
+              spark={spark(4)}
+              tone="warning"
+            />
           </div>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-5">

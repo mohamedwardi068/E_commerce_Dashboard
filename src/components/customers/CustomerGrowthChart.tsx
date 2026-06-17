@@ -43,14 +43,45 @@ export function CustomerGrowthChart() {
                 <stop offset="95%" stopColor="var(--primary)" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }} dy={10} />
-            <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }} tickFormatter={(value) => (value >= 1000 ? `${value / 1000}K` : value)} />
+            <XAxis
+              dataKey="name"
+              axisLine={false}
+              tickLine={false}
+              tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+              dy={10}
+            />
+            <YAxis
+              axisLine={false}
+              tickLine={false}
+              tick={{ fontSize: 10, fill: "hsl(var(--muted-foreground))" }}
+              tickFormatter={(value) => (value >= 1000 ? `${value / 1000}K` : value)}
+            />
             <Tooltip
-              contentStyle={{ backgroundColor: "hsl(var(--card))", borderColor: "hsl(var(--border))", borderRadius: "8px", fontSize: "12px", color: "hsl(var(--foreground))" }}
+              contentStyle={{
+                backgroundColor: "hsl(var(--card))",
+                borderColor: "hsl(var(--border))",
+                borderRadius: "8px",
+                fontSize: "12px",
+                color: "hsl(var(--foreground))",
+              }}
               itemStyle={{ color: "hsl(var(--foreground))" }}
             />
-            <Area type="monotone" dataKey="previous" stroke="var(--primary)" strokeDasharray="3 3" strokeWidth={2} fill="transparent" />
-            <Area type="monotone" dataKey="current" stroke="var(--primary)" strokeWidth={3} fillOpacity={1} fill="url(#colorCustomers)" />
+            <Area
+              type="monotone"
+              dataKey="previous"
+              stroke="var(--primary)"
+              strokeDasharray="3 3"
+              strokeWidth={2}
+              fill="transparent"
+            />
+            <Area
+              type="monotone"
+              dataKey="current"
+              stroke="var(--primary)"
+              strokeWidth={3}
+              fillOpacity={1}
+              fill="url(#colorCustomers)"
+            />
           </AreaChart>
         </ResponsiveContainer>
       </div>

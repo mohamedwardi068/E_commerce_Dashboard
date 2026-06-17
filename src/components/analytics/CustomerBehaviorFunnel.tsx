@@ -1,9 +1,39 @@
 const data = [
-  { name: "Sessions", value: 56342, fill: "#3b82f6", percentage: "", points: "0,0 200,0 186,35 14,35" },
-  { name: "View Product", value: 18742, fill: "#10b981", percentage: "(33.2%)", points: "16,40 184,40 170,75 30,75" },
-  { name: "Add to Cart", value: 8421, fill: "#a855f7", percentage: "(14.9%)", points: "32,80 168,80 154,115 46,115" },
-  { name: "Checkout", value: 3215, fill: "#f59e0b", percentage: "(5.7%)", points: "48,120 152,120 138,155 62,155" },
-  { name: "Purchase", value: 1801, fill: "#ef4444", percentage: "(3.2%)", points: "64,160 136,160 122,195 78,195" },
+  {
+    name: "Sessions",
+    value: 56342,
+    fill: "#3b82f6",
+    percentage: "",
+    points: "0,0 200,0 186,35 14,35",
+  },
+  {
+    name: "View Product",
+    value: 18742,
+    fill: "#10b981",
+    percentage: "(33.2%)",
+    points: "16,40 184,40 170,75 30,75",
+  },
+  {
+    name: "Add to Cart",
+    value: 8421,
+    fill: "#a855f7",
+    percentage: "(14.9%)",
+    points: "32,80 168,80 154,115 46,115",
+  },
+  {
+    name: "Checkout",
+    value: 3215,
+    fill: "#f59e0b",
+    percentage: "(5.7%)",
+    points: "48,120 152,120 138,155 62,155",
+  },
+  {
+    name: "Purchase",
+    value: 1801,
+    fill: "#ef4444",
+    percentage: "(3.2%)",
+    points: "64,160 136,160 122,195 78,195",
+  },
 ];
 
 export function CustomerBehaviorFunnel() {

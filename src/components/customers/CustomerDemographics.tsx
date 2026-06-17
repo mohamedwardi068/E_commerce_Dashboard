@@ -13,7 +13,6 @@ export function CustomerDemographics() {
     <div className="flex h-full flex-col rounded-xl border border-border bg-card/50 p-6 backdrop-blur">
       <h2 className="mb-4 text-sm font-semibold text-foreground">Customer Demographics</h2>
       <div className="flex flex-1 flex-col justify-between">
-        
         {/* Gender Split */}
         <div className="flex items-center justify-around mb-6 mt-2">
           <div className="flex flex-col items-center gap-2">
@@ -49,7 +48,6 @@ export function CustomerDemographics() {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

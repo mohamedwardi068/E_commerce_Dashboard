@@ -28,7 +28,9 @@ export function TopPages() {
         ))}
       </div>
       <div className="mt-4 pt-4 border-t border-border text-center">
-        <button className="text-xs font-medium text-primary hover:text-primary/80">View all pages</button>
+        <button className="text-xs font-medium text-primary hover:text-primary/80">
+          View all pages
+        </button>
       </div>
     </div>
   );

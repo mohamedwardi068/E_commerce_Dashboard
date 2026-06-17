@@ -1,12 +1,68 @@
+import { Link } from "@tanstack/react-router";
 import { Headphones, Watch, Briefcase, Footprints, Shirt } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const products = [
-  { id: 1, name: "Wireless Headphones", sku: "WH-1000XM5", category: "Electronics", price: "$199.99", inventory: 120, sold: 432, revenue: "$86,391", status: "In Stock", icon: Headphones },
-  { id: 2, name: "Smart Watch Series 8", sku: "SW-8-45", category: "Electronics", price: "$249.99", inventory: 85, sold: 312, revenue: "$77,997", status: "In Stock", icon: Watch },
-  { id: 3, name: "Leather Backpack", sku: "LB-2024", category: "Fashion", price: "$129.99", inventory: 60, sold: 289, revenue: "$37,567", status: "Low Stock", icon: Briefcase },
-  { id: 4, name: "Running Shoes", sku: "RS-2024", category: "Sports", price: "$89.99", inventory: 0, sold: 156, revenue: "$14,034", status: "Out of Stock", icon: Footprints },
-  { id: 5, name: "Denim Jacket", sku: "DJ-501", category: "Fashion", price: "$79.99", inventory: 15, sold: 132, revenue: "$10,555", status: "Low Stock", icon: Shirt },
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    sku: "WH-1000XM5",
+    category: "Electronics",
+    price: "$199.99",
+    inventory: 120,
+    sold: 432,
+    revenue: "$86,391",
+    status: "In Stock",
+    icon: Headphones,
+  },
+  {
+    id: 2,
+    name: "Smart Watch Series 8",
+    sku: "SW-8-45",
+    category: "Electronics",
+    price: "$249.99",
+    inventory: 85,
+    sold: 312,
+    revenue: "$77,997",
+    status: "In Stock",
+    icon: Watch,
+  },
+  {
+    id: 3,
+    name: "Leather Backpack",
+    sku: "LB-2024",
+    category: "Fashion",
+    price: "$129.99",
+    inventory: 60,
+    sold: 289,
+    revenue: "$37,567",
+    status: "Low Stock",
+    icon: Briefcase,
+  },
+  {
+    id: 4,
+    name: "Running Shoes",
+    sku: "RS-2024",
+    category: "Sports",
+    price: "$89.99",
+    inventory: 0,
+    sold: 156,
+    revenue: "$14,034",
+    status: "Out of Stock",
+    icon: Footprints,
+  },
+  {
+    id: 5,
+    name: "Denim Jacket",
+    sku: "DJ-501",
+    category: "Fashion",
+    price: "$79.99",
+    inventory: 15,
+    sold: 132,
+    revenue: "$10,555",
+    status: "Low Stock",
+    icon: Shirt,
+  },
 ];
 
 const statusStyles = {
@@ -20,7 +76,9 @@ export function TopProductsList() {
     <div className="flex h-full flex-col rounded-xl border border-border bg-card/50 p-6 backdrop-blur">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-sm font-semibold text-foreground">Top Products</h2>
-        <button className="text-xs font-medium text-primary hover:text-primary/80">View all products</button>
+        <Link to="/products" className="text-xs font-medium text-primary hover:text-primary/80">
+          View all products
+        </Link>
       </div>
       <div className="flex-1 overflow-x-auto">
         <table className="w-full min-w-[600px] text-left text-xs text-muted-foreground">
@@ -54,7 +112,12 @@ export function TopProductsList() {
                 <td className="py-3 text-right">{product.sold}</td>
                 <td className="py-3 text-right font-medium text-foreground">{product.revenue}</td>
                 <td className="py-3 text-right">
-                  <span className={cn("inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium", statusStyles[product.status as keyof typeof statusStyles])}>
+                  <span
+                    className={cn(
+                      "inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium",
+                      statusStyles[product.status as keyof typeof statusStyles],
+                    )}
+                  >
                     {product.status}
                   </span>
                 </td>

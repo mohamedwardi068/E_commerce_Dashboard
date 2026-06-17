@@ -17,16 +17,22 @@ export function TopCustomersByRevenue() {
             <div className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-primary/20 text-[8px] font-bold text-primary">
               {customer.avatar}
             </div>
-            <div className="w-24 shrink-0 truncate text-xs font-medium text-foreground">{customer.name}</div>
+            <div className="w-24 shrink-0 truncate text-xs font-medium text-foreground">
+              {customer.name}
+            </div>
             <div className="flex h-2 flex-1 items-center rounded-full bg-muted/50">
               <div className="h-full rounded-full bg-blue-500" style={{ width: customer.width }} />
             </div>
-            <div className="w-16 text-right text-xs font-medium text-foreground">{customer.value}</div>
+            <div className="w-16 text-right text-xs font-medium text-foreground">
+              {customer.value}
+            </div>
           </div>
         ))}
       </div>
       <div className="mt-4 border-t border-border pt-4 text-center">
-        <button className="text-xs font-medium text-primary hover:text-primary/80">View full report</button>
+        <button className="text-xs font-medium text-primary hover:text-primary/80">
+          View full report
+        </button>
       </div>
     </div>
   );

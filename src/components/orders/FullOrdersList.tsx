@@ -1,11 +1,51 @@
 import { cn } from "@/lib/utils";
 
 const orders = [
-  { id: "#1024", customer: "John Smith", avatar: "JS", date: "Jun 12, 2024", status: "Delivered", total: "$129.99", payment: "Visa" },
-  { id: "#1023", customer: "Emily Johnson", avatar: "EJ", date: "Jun 12, 2024", status: "Paid", total: "$89.50", payment: "Mastercard" },
-  { id: "#1022", customer: "Michael Brown", avatar: "MB", date: "Jun 11, 2024", status: "Shipped", total: "$249.00", payment: "PayPal" },
-  { id: "#1021", customer: "Sarah Davis", avatar: "SD", date: "Jun 11, 2024", status: "Pending", total: "$59.99", payment: "Visa" },
-  { id: "#1020", customer: "David Wilson", avatar: "DW", date: "Jun 10, 2024", status: "Cancelled", total: "$199.99", payment: "Mastercard" },
+  {
+    id: "#1024",
+    customer: "John Smith",
+    avatar: "JS",
+    date: "Jun 12, 2024",
+    status: "Delivered",
+    total: "$129.99",
+    payment: "Visa",
+  },
+  {
+    id: "#1023",
+    customer: "Emily Johnson",
+    avatar: "EJ",
+    date: "Jun 12, 2024",
+    status: "Paid",
+    total: "$89.50",
+    payment: "Mastercard",
+  },
+  {
+    id: "#1022",
+    customer: "Michael Brown",
+    avatar: "MB",
+    date: "Jun 11, 2024",
+    status: "Shipped",
+    total: "$249.00",
+    payment: "PayPal",
+  },
+  {
+    id: "#1021",
+    customer: "Sarah Davis",
+    avatar: "SD",
+    date: "Jun 11, 2024",
+    status: "Pending",
+    total: "$59.99",
+    payment: "Visa",
+  },
+  {
+    id: "#1020",
+    customer: "David Wilson",
+    avatar: "DW",
+    date: "Jun 10, 2024",
+    status: "Cancelled",
+    total: "$199.99",
+    payment: "Mastercard",
+  },
 ];
 
 const statusStyles = {
@@ -21,7 +61,9 @@ export function FullOrdersList() {
     <div className="flex h-full flex-col rounded-xl border border-border bg-card/50 p-6 backdrop-blur">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-sm font-semibold text-foreground">Recent Orders</h2>
-        <button className="text-xs font-medium text-primary hover:text-primary/80">View all orders</button>
+        <button className="text-xs font-medium text-primary hover:text-primary/80">
+          View all orders
+        </button>
       </div>
       <div className="flex-1 overflow-x-auto">
         <table className="w-full text-left text-xs text-muted-foreground">
@@ -49,7 +91,12 @@ export function FullOrdersList() {
                 </td>
                 <td className="py-3">{order.date}</td>
                 <td className="py-3">
-                  <span className={cn("inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium", statusStyles[order.status as keyof typeof statusStyles])}>
+                  <span
+                    className={cn(
+                      "inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium",
+                      statusStyles[order.status as keyof typeof statusStyles],
+                    )}
+                  >
                     {order.status}
                   </span>
                 </td>

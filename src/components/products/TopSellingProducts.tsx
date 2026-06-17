@@ -19,16 +19,22 @@ export function TopSellingProducts() {
             <div className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-muted text-muted-foreground">
               <product.icon className="h-3 w-3" />
             </div>
-            <div className="w-32 shrink-0 truncate text-xs font-medium text-foreground">{product.name}</div>
+            <div className="w-32 shrink-0 truncate text-xs font-medium text-foreground">
+              {product.name}
+            </div>
             <div className="flex h-2 flex-1 items-center rounded-full bg-muted/50">
               <div className="h-full rounded-full bg-blue-500" style={{ width: product.width }} />
             </div>
-            <div className="w-8 text-right text-xs font-medium text-foreground">{product.value}</div>
+            <div className="w-8 text-right text-xs font-medium text-foreground">
+              {product.value}
+            </div>
           </div>
         ))}
       </div>
       <div className="mt-4 border-t border-border pt-4 text-center">
-        <button className="text-xs font-medium text-primary hover:text-primary/80">View full report</button>
+        <button className="text-xs font-medium text-primary hover:text-primary/80">
+          View full report
+        </button>
       </div>
     </div>
   );

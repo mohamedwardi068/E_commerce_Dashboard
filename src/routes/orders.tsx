@@ -1,5 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ShoppingCart, DollarSign, TrendingUp, Calendar, Search, Bell, ChevronDown, Download, Plus, ChevronRight } from "lucide-react";
+import {
+  ShoppingCart,
+  DollarSign,
+  TrendingUp,
+  Calendar,
+  Search,
+  Bell,
+  ChevronDown,
+  Download,
+  Plus,
+  ChevronRight,
+} from "lucide-react";
 import { Sidebar } from "@/components/dashboard/Sidebar";
 import { MetricCard } from "@/components/dashboard/MetricCard";
 import { OrdersOverviewChart } from "@/components/orders/OrdersOverviewChart";
@@ -40,7 +51,9 @@ function OrdersPage() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Orders</h1>
-              <p className="text-sm text-muted-foreground">Track, manage and fulfill customer orders.</p>
+              <p className="text-sm text-muted-foreground">
+                Track, manage and fulfill customer orders.
+              </p>
             </div>
             <div className="flex items-center gap-2">
               <button className="flex items-center gap-2 rounded-md border border-border bg-card/50 px-3 py-2 text-xs font-medium text-muted-foreground hover:text-foreground">
@@ -57,10 +70,38 @@ function OrdersPage() {
 
           {/* Top Metrics */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <MetricCard label="Total Orders" value="2,568" delta={18.7} icon={ShoppingCart} spark={spark(1)} tone="primary" />
-            <MetricCard label="Total Revenue" value="$1.28M" delta={12.4} icon={DollarSign} spark={spark(2)} tone="accent" />
-            <MetricCard label="Average Order Value" value="$89.41" delta={8.6} icon={TrendingUp} spark={spark(4)} tone="warning" />
-            <MetricCard label="Orders This Month" value="732" delta={15.3} icon={Calendar} spark={spark(5)} tone="chart-3" />
+            <MetricCard
+              label="Total Orders"
+              value="2,568"
+              delta={18.7}
+              icon={ShoppingCart}
+              spark={spark(1)}
+              tone="primary"
+            />
+            <MetricCard
+              label="Total Revenue"
+              value="$1.28M"
+              delta={12.4}
+              icon={DollarSign}
+              spark={spark(2)}
+              tone="accent"
+            />
+            <MetricCard
+              label="Average Order Value"
+              value="$89.41"
+              delta={8.6}
+              icon={TrendingUp}
+              spark={spark(4)}
+              tone="warning"
+            />
+            <MetricCard
+              label="Orders This Month"
+              value="732"
+              delta={15.3}
+              icon={Calendar}
+              spark={spark(5)}
+              tone="chart-3"
+            />
           </div>
 
           {/* Middle Charts */}

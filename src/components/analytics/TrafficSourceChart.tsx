@@ -16,7 +16,14 @@ export function TrafficSourceChart() {
         <div className="relative h-32 w-32 shrink-0">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
-              <Pie data={data} innerRadius={40} outerRadius={60} paddingAngle={2} dataKey="value" stroke="none">
+              <Pie
+                data={data}
+                innerRadius={40}
+                outerRadius={60}
+                paddingAngle={2}
+                dataKey="value"
+                stroke="none"
+              >
                 {data.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}

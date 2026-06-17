@@ -1,4 +1,18 @@
-import { LayoutDashboard, BarChart3, Users, Settings, ShoppingCart, Package, Zap, Megaphone, Tags, FileText, HelpCircle, LogOut, ShoppingCartIcon } from "lucide-react";
+import {
+  LayoutDashboard,
+  BarChart3,
+  Users,
+  Settings,
+  ShoppingCart,
+  Package,
+  Zap,
+  Megaphone,
+  Tags,
+  FileText,
+  HelpCircle,
+  LogOut,
+  ShoppingCartIcon,
+} from "lucide-react";
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
@@ -27,10 +41,7 @@ export function Sidebar() {
         <BarChart3 className="h-5 w-5" />
       </button>
       {open && (
-        <div
-          onClick={() => setOpen(false)}
-          className="fixed inset-0 z-30 bg-black/60 lg:hidden"
-        />
+        <div onClick={() => setOpen(false)} className="fixed inset-0 z-30 bg-black/60 lg:hidden" />
       )}
       <aside
         className={cn(
@@ -53,10 +64,12 @@ export function Sidebar() {
               key={label}
               to={to}
               activeProps={{
-                className: "bg-sidebar-primary/15 text-sidebar-primary shadow-[inset_0_0_0_1px] shadow-sidebar-primary/30",
+                className:
+                  "bg-sidebar-primary/15 text-sidebar-primary shadow-[inset_0_0_0_1px] shadow-sidebar-primary/30",
               }}
               inactiveProps={{
-                className: "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-foreground",
+                className:
+                  "text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-foreground",
               }}
               className="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors"
             >
@@ -67,7 +80,9 @@ export function Sidebar() {
         </nav>
         <div className="rounded-xl border border-sidebar-border bg-gradient-to-br from-primary/15 to-accent/10 p-4 mb-4">
           <p className="text-sm font-semibold text-sidebar-foreground">Store Upgrade</p>
-          <p className="mt-1 text-xs text-muted-foreground">Unlock advanced inventory and custom reports.</p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Unlock advanced inventory and custom reports.
+          </p>
           <button className="mt-3 w-full rounded-md bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground hover:opacity-90">
             Upgrade
           </button>

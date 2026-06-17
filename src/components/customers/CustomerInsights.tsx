@@ -38,7 +38,9 @@ export function CustomerInsights() {
       <div className="flex flex-1 flex-col justify-between space-y-4">
         {insights.map((item) => (
           <div key={item.title} className="flex gap-3">
-            <div className={`mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg ${item.bgClass} ${item.colorClass}`}>
+            <div
+              className={`mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg ${item.bgClass} ${item.colorClass}`}
+            >
               <item.icon className="h-4 w-4" />
             </div>
             <div>
