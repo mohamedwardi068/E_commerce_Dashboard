@@ -46,7 +46,7 @@ function ProfilePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 shrink-0" />
-                  <span>aida.morgan@nimbus.com</span>
+                  <span>aida.morgan@Swoo.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 shrink-0" />
@@ -54,7 +54,7 @@ function ProfilePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Building className="h-4 w-4 shrink-0" />
-                  <span>Nimbus E-Commerce HQ</span>
+                  <span>Swoo E-Commerce HQ</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4 shrink-0" />

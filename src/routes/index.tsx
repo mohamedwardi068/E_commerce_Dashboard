@@ -13,7 +13,7 @@ import { BottomMetrics } from "@/components/dashboard/BottomMetrics";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nimbus E-Commerce — Dashboard" },
+      { title: "Swoo E-Commerce — Dashboard" },
       {
         name: "description",
         content: "Real-time analytics dashboard for e-commerce sales, retention, and conversion.",
