@@ -101,10 +101,10 @@ export function HeaderActions() {
           className="flex shrink-0 items-center gap-2 rounded-lg border border-border bg-card/50 py-1.5 pl-1.5 pr-2 transition-colors hover:bg-muted/50 sm:pr-3 focus:outline-none focus:ring-2 focus:ring-primary/30"
         >
           <span className="grid h-7 w-7 place-items-center rounded-md bg-gradient-to-br from-primary to-accent text-xs font-bold text-primary-foreground">
-            AM
+            MO
           </span>
           <div className="hidden text-left sm:block">
-            <p className="text-xs font-semibold text-foreground">Aida Morgan</p>
+            <p className="text-xs font-semibold text-foreground">Mohamed El Ouardi</p>
             <p className="text-[10px] text-muted-foreground">Admin</p>
           </div>
           <ChevronDown className="hidden h-4 w-4 text-muted-foreground sm:block" />

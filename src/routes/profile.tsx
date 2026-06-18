@@ -35,7 +35,7 @@ function ProfilePage() {
             <div className="flex-1 space-y-4">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <h1 className="text-2xl font-bold tracking-tight text-foreground">Aida Morgan</h1>
+                  <h1 className="text-2xl font-bold tracking-tight text-foreground">Mohamed El Ouardi</h1>
                   <p className="text-sm font-medium text-primary">Senior Store Administrator</p>
                 </div>
                 <button className="flex items-center gap-2 rounded-md border border-border bg-muted/30 px-3 py-1.5 text-xs font-medium text-foreground hover:bg-muted/50 transition-colors">
@@ -46,7 +46,7 @@ function ProfilePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 shrink-0" />
-                  <span>aida.morgan@Swoo.com</span>
+                  <span>mohamedwardi068@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 shrink-0" />

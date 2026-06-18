@@ -55,7 +55,7 @@ function AnalyticsPage() {
                 AM
               </span>
               <div className="hidden text-left sm:block">
-                <p className="text-xs font-semibold text-foreground">Aida Morgan</p>
+                <p className="text-xs font-semibold text-foreground">Mohamed El Ouardi</p>
                 <p className="text-[10px] text-muted-foreground">Admin</p>
               </div>
               <ChevronDown className="hidden h-4 w-4 text-muted-foreground sm:block" />
